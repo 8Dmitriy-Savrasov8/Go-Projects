@@ -104,7 +104,7 @@ func result_R(z, x, y string) string {
 	arabic_Digit := [9]int{100, 90, 50, 40, 10, 9, 5, 4, 1}
 	roman_Res := result_Ar(z, roman_To_Arabic(x), roman_To_Arabic(y))
 	result := ""
-	if x <= y && z == "-" {
+	if x <= y && (z == "-" || z == "/") {
 		fmt.Println("ошибка №_006: решение невозможно (в римской системе счисления нет 'ноля' и отрицательных чисел) перезапустите приложение и попробуйте снова")
 		result = "нет"
 	} else {
